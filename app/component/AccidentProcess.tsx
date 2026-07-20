@@ -39,7 +39,7 @@ export default function AccidentProcess() {
         </h2>
 
         <p className="text-center text-gray-400 mt-5 mb-16">
-          보험사 확인부터 차량 배차 수리업체 픽&드랍 수리후 렌트반납까지 한솔네트웍스가 원스톱으로 도와드립니다.
+          보험사 확인부터 차량 배차 수리업체 픽업&드랍 수리후 렌트반납까지 한솔네트웍스가 원스톱으로 도와드립니다.
         </p>
 
         <div className="grid md:grid-cols-4 gap-8">

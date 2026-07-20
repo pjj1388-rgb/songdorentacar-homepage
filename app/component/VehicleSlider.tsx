@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 const cars = [
   {
     name: "더 뉴 쏘렌토",
-    image: "/images/sorento.jpg",
+    image: "/cars/sorento.jpg",
     desc: "프리미엄 SUV · 사고대차 · 단기렌트",
   },
   {
@@ -20,20 +20,51 @@ const cars = [
   },
   {
     name: "디 올 뉴 그랜저",
-    image: "/grandeur.jpg",
+    image: "/cars/grandeur.jpg",
     desc: "고급 세단 · 사고대차",
   },
   {
     name: "카니발 9인승",
-    image: "/carnival.jpg",
+    image: "/cars/carnival.jpg",
     desc: "가족여행 · 단체 이동",
   },
   {
     name: "디 올 뉴 싼타페",
-    image: "/santafe.jpg",
+    image: "/cars/santafe.jpg",
     desc: "SUV · 단기렌트",
   },
+  {
+  name: "르노 qm6",
+  image: "/cars/qm6.jpg",
+  desc: "가성비 SUV · 사고대차 · 단기렌트",
+  },
+  {
+    name: "르노 xm3",
+    image: "/cars/xm3.jpg",
+    desc: "가성비 SUV · 사고대차 · 단기렌트",
+  },
+  {
+  name: "더 뉴 그랜저 IG",
+  image: "/cars/grandeurig.jpg",
+  desc: "가성비세단 · 사고대차 · 단기렌트",
+  },
+  {
+  name: "디 올 뉴 그랜저 2",
+  image: "/cars/grandeur1.jpg",
+  desc: "고급세단 · 사고대차 · 단기렌트",
+  },
+  {
+  name: "디 올 뉴 그랜저 3",
+  image: "/cars/grandeur2.jpg",
+  desc: "고급세단 · 사고대차 · 단기렌트",
+  },
+   {
+  name: "카니발 9인승 2",
+  image: "/cars/carnival2.jpg",
+  desc: "가족여행 · 단체이동 · 단기렌트",
+  },
 ];
+
 
 export default function VehicleSlider() {
   return (

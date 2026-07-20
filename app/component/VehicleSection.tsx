@@ -2,34 +2,79 @@ import Image from "next/image";
 
 const cars = [
   {
+    name: "더 뉴 쏘렌토",
+    image: "/cars/sorento.jpg",
+    desc: "프리미엄 SUV · 사고대차 · 단기렌트",
+  },
+  {
     name: "벤츠 S400d",
-    image: "/hero.jpg",
+    image: "/hero/hero.jpg",
     desc: "VIP 의전 · 프리미엄 단기렌트",
   },
   {
-    name: "쏘나타 디 엣지",
-    image: "/sonata.jpg",
-    desc: "신차급 컨디션 · 단기렌트",
-  },
-  {
     name: "디 올 뉴 그랜저",
-    image: "/grandeur.jpg",
+    image: "/cars/grandeur.jpg",
     desc: "고급 세단 · 사고대차",
   },
   {
     name: "카니발 9인승",
-    image: "/carnival.jpg",
-    desc: "가족여행 · 단체이동",
+    image: "/cars/carnival.jpg",
+    desc: "가족여행 · 단체 이동",
+  },
+  {
+    name: "쏘나타 디엣지",
+    image: "/cars/sonata.jpg",
+    desc: "신차급 컨디션 · 단기렌트",
   },
   {
     name: "디 올 뉴 싼타페",
-    image: "/santafe.jpg",
+    image: "/cars/santafe.jpg",
     desc: "SUV · 단기렌트",
   },
   {
-    name: "기아 쏘렌토 MQ4",
-    image: "/sorento.jpg",
-    desc: "프리미엄 SUV · 사고대차",
+  name: "르노 qm6",
+  image: "/cars/qm6.jpg",
+  desc: "가성비 SUV · 사고대차 · 단기렌트",
+  },
+  {
+    name: "르노 xm3",
+    image: "/cars/xm3.jpg",
+    desc: "가성비 소형SUV · 사고대차 · 단기렌트",
+  },
+  {
+  name: "더 뉴 그랜저 IG",
+  image: "/cars/grandeurig.jpg",
+  desc: "가성비세단 · 사고대차 · 단기렌트",
+  },
+  {
+  name: "디 올 뉴 그랜저 2",
+  image: "/cars/grandeur1.jpg",
+  desc: "고급세단 · 사고대차 · 단기렌트",
+  },
+  {
+  name: "디 올 뉴 그랜저 3",
+  image: "/cars/grandeur2.jpg",
+  desc: "고급세단 · 사고대차 · 단기렌트",
+  },
+   {
+  name: "카니발 9인승 2",
+  image: "/cars/carnival2.jpg",
+  desc: "가족여행 · 단체이동 · 단기렌트",
+  },
+   {
+    name: "르노 xm3 2",
+    image: "/cars/3483.jpg",
+    desc: "가성비 소형SUV · 사고대차 · 단기렌트",
+  },
+     {
+    name: "기아 K5",
+    image: "/cars/k53091.jpg",
+    desc: "가성비 중형 세단 · 사고대차 · 단기렌트",
+  },
+  {
+    name: "스타리아 9인승",
+    image: "/cars/staria.jpg",
+    desc: "가족여행 승합 · 단체이동 · 단기렌트",
   },
 ];
 
