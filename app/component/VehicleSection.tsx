@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import VehicleSlider from "./VehicleSlider";
+import VehicleSlider from "@/app/component/VehicleSlider";
 
 interface Car {
   name: string;
