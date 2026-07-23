@@ -11,23 +11,41 @@ import {
 } from "lucide-react";
 
 export default function ServiceSection() {
+  const scrollToSection = (id: string) => {
+    const target = document.getElementById(id);
+
+    if (!target) return;
+
+    const headerHeight = 100;
+
+    const targetY =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight;
+
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       id="service"
-      className="bg-[#0b0b0b] py-28 relative overflow-hidden"
+      className="relative overflow-hidden bg-[#0b0b0b] py-28"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
 
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .7 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="tracking-[6px] text-yellow-400 font-semibold">
+          <p className="tracking-[6px] font-semibold text-yellow-400">
             OUR SERVICE
           </p>
 
@@ -35,7 +53,7 @@ export default function ServiceSection() {
             어떤 서비스가 필요하신가요?
           </h2>
 
-          <p className="mt-6 text-gray-400 text-lg leading-8 max-w-3xl mx-auto">
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
             사고대차와 단기렌트를 하나의 프리미엄 서비스로 제공합니다.
             <br />
             고객님의 상황에 맞는 서비스를 선택해보세요.
@@ -48,7 +66,7 @@ export default function ServiceSection() {
 
           <motion.div
             whileHover={{ y: -8 }}
-            transition={{ duration: .3 }}
+            transition={{ duration: 0.3 }}
             className="group rounded-3xl border border-white/10 bg-[#151515] p-10 transition-all hover:border-yellow-400/50 hover:shadow-2xl hover:shadow-yellow-500/10"
           >
 
@@ -59,7 +77,7 @@ export default function ServiceSection() {
               </div>
 
               <div>
-                <p className="text-yellow-400 font-semibold">
+                <p className="font-semibold text-yellow-400">
                   ACCIDENT RENTAL
                 </p>
 
@@ -78,29 +96,38 @@ export default function ServiceSection() {
             <div className="mt-10 space-y-4">
 
               <div className="flex items-center gap-3 text-white">
-                <Clock3 className="text-yellow-400" size={20}/>
+                <Clock3
+                  className="text-yellow-400"
+                  size={20}
+                />
                 24시간 상담
               </div>
 
               <div className="flex items-center gap-3 text-white">
-                <MapPinned className="text-yellow-400" size={20}/>
+                <MapPinned
+                  className="text-yellow-400"
+                  size={20}
+                />
                 송도 · 인천 전지역 배차
               </div>
-
-              <div className="flex items-center gap-3 text-white">
-                <CarFront className="text-yellow-400" size={20}/>
+                            <div className="flex items-center gap-3 text-white">
+                <CarFront
+                  className="text-yellow-400"
+                  size={20}
+                />
                 다양한 사고대차 차량 보유
               </div>
 
             </div>
 
-            <a
-              href="#accident"
-              className="mt-10 inline-flex items-center gap-3 rounded-full bg-yellow-400 px-7 py-4 font-bold text-black transition hover:scale-105"
+            <button
+              type="button"
+              onClick={() => scrollToSection("accident")}
+              className="mt-10 inline-flex cursor-pointer items-center gap-3 rounded-full bg-yellow-400 px-7 py-4 font-bold text-black transition duration-300 hover:scale-105 active:scale-95"
             >
               사고대차 안내
-              <ArrowRight size={18}/>
-            </a>
+              <ArrowRight size={18} />
+            </button>
 
           </motion.div>
 
@@ -108,19 +135,19 @@ export default function ServiceSection() {
 
           <motion.div
             whileHover={{ y: -8 }}
-            transition={{ duration: .3 }}
+            transition={{ duration: 0.3 }}
             className="group rounded-3xl border border-white/10 bg-[#151515] p-10 transition-all hover:border-yellow-400/50 hover:shadow-2xl hover:shadow-yellow-500/10"
           >
 
             <div className="flex items-center gap-4">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400 text-black">
-                <Plane size={34}/>
+                <Plane size={34} />
               </div>
 
               <div>
 
-                <p className="text-yellow-400 font-semibold">
+                <p className="font-semibold text-yellow-400">
                   SHORT RENT
                 </p>
 
@@ -133,7 +160,7 @@ export default function ServiceSection() {
             </div>
 
             <p className="mt-8 text-lg leading-8 text-gray-300">
-              여행, 출장, 차량 정비 기간까지.
+              여행, 출장, 차량 정비 기간까지
               필요한 기간만큼 편리하게 이용하실 수 있도록
               신차급 차량을 준비했습니다.
             </p>
@@ -141,35 +168,45 @@ export default function ServiceSection() {
             <div className="mt-10 space-y-4">
 
               <div className="flex items-center gap-3 text-white">
-                <CarFront className="text-yellow-400" size={20}/>
+                <CarFront
+                  className="text-yellow-400"
+                  size={20}
+                />
                 세단 · SUV · 승합차
               </div>
 
               <div className="flex items-center gap-3 text-white">
-                <Clock3 className="text-yellow-400" size={20}/>
+                <Clock3
+                  className="text-yellow-400"
+                  size={20}
+                />
                 일렌트 · 주렌트 · 월렌트
               </div>
-
-              <div className="flex items-center gap-3 text-white">
-                <ShieldCheck className="text-yellow-400" size={20}/>
+                            <div className="flex items-center gap-3 text-white">
+                <ShieldCheck
+                  className="text-yellow-400"
+                  size={20}
+                />
                 철저한 차량관리
               </div>
 
             </div>
 
-            <a
-              href="#vehicle"
-              className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/5 px-7 py-4 font-bold text-white transition hover:bg-white hover:text-black"
+            <button
+              type="button"
+              onClick={() => scrollToSection("vehicle")}
+              className="mt-10 inline-flex cursor-pointer items-center gap-3 rounded-full border border-white/30 bg-white/5 px-7 py-4 font-bold text-white transition duration-300 hover:bg-white hover:text-black active:scale-95"
             >
               차량 둘러보기
-              <ArrowRight size={18}/>
-            </a>
+              <ArrowRight size={18} />
+            </button>
 
           </motion.div>
 
         </div>
 
       </div>
+
     </section>
   );
 }

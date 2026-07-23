@@ -42,7 +42,7 @@ export default function Header() {
             보유차량
           </a>
 
-          <a href="#process" className="hover:text-yellow-400 transition">
+          <a href="#accident" className="hover:text-yellow-400 transition">
             사고대차
           </a>
 

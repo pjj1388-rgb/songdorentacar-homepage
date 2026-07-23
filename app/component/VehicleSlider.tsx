@@ -15,7 +15,7 @@ const cars = [
   },
   {
     name: "벤츠 S400d",
-    image: "/s400.jpg",
+    image: "/hero/s400.jpg",
     desc: "VIP 의전 · 프리미엄 단기렌트",
   },
   {

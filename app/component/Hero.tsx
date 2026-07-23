@@ -6,7 +6,7 @@ import { Phone, CarFront, ChevronDown, ShieldCheck, Clock3, Sparkles } from "luc
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[760px] overflow-hidden">
+    <section className="relative h-screen min-h-[760px] overflow-hidden z-0">
 
       {/* Background */}
 <Image
@@ -18,18 +18,18 @@ export default function Hero() {
 />
 
 {/* Overlay */}
-<div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+<div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
 
 
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+     <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
 
       {/* Gold Blur */}
-      <div className="absolute -left-32 top-40 h-80 w-80 rounded-full bg-yellow-500/10 blur-[140px]" />
-      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-yellow-400/10 blur-[180px]" />
+     <div className="pointer-events-none absolute -left-32 top-40 h-80 w-80 rounded-full bg-yellow-500/10 blur-[140px]" />
+     <div className="pointer-events-none absolute right-0 bottom-0 h-96 w-96 rounded-full bg-yellow-400/10 blur-[180px]" />
 
-      <div className="relative z-10 flex h-full items-center">
+      <div className="relative z-20 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-6">
 
           <motion.div
