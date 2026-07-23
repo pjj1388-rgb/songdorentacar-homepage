@@ -1,31 +1,45 @@
 import Header from "./component/Header";
 import Hero from "./component/Hero";
+import ServiceSection from "./component/ServiceSection";
 import StatisticsSection from "./component/StatisticsSection";
 import VehicleSection from "./component/VehicleSection";
+import AccidentProcess from "./component/AccidentProcess";
+import EmergencySection from "./component/EmergencySection";
 import CTASection from "./component/CTASection";
 import WhyUs from "./component/WhyUs";
 import ContactSection from "./component/ContactSection";
 import Footer from "./component/Footer";
-import ServiceSection from "./component/ServiceSection";
-import AccidentProcess from "./component/AccidentProcess";
 import MobileBar from "./component/MobileBar";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <ServiceSection />
-      <StatisticsSection />
 
-      <VehicleSection />
+      <main>
 
-      <AccidentProcess />
+        <Hero />
 
-      <CTASection />
-      <WhyUs />
-      <ContactSection />
+        <StatisticsSection />
+
+        <ServiceSection />
+
+        <VehicleSection />
+
+        <AccidentProcess />
+
+        <EmergencySection />
+
+        <WhyUs />
+
+        <CTASection />
+
+        <ContactSection />
+
+      </main>
+
       <Footer />
+
       <MobileBar />
     </>
   );

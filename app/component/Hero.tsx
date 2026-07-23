@@ -22,8 +22,7 @@ export default function Hero() {
 
 
 
-      {/* Overlay */}
-     <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+  
 
       {/* Gold Blur */}
      <div className="pointer-events-none absolute -left-32 top-40 h-80 w-80 rounded-full bg-yellow-500/10 blur-[140px]" />
