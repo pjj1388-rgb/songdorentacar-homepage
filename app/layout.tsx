@@ -43,19 +43,26 @@ export const metadata: Metadata = {
     title: "한솔네트웍스 송도지점",
     description:
       "송도 단기렌트 · 사고대차 전문 | 신차급 차량 보유 | 24시간 상담",
-    url: "https://songdorentacar.com",
+    url: "https://songdorentacar.co.kr",
     siteName: "한솔네트웍스 송도지점",
     locale: "ko_KR",
     type: "website",
   },
 
   alternates: {
-    canonical: "https://songdorentacar.com",
+    canonical: "https://songdorentacar.co.kr",
   },
 
   robots: {
     index: true,
     follow: true,
+  },
+
+  verification: {
+    other: {
+      "naver-site-verification":
+        "bd06a3433405019403c2630db1cf2aa5b565e27e",
+    },
   },
 };
 

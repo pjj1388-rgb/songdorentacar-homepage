@@ -16,12 +16,12 @@ const steps = [
   {
     icon: ClipboardCheck,
     title: "보험사 확인",
-    desc: "대차 가능 여부를 확인 후 010-2221-3110으로 연락합니다.",
+    desc: "보험사 대차 가능 여부를 확인한 뒤 한솔네트웍스로 연락합니다.",
   },
   {
     icon: CarFront,
     title: "무료 차량 배차",
-    desc: "수도권 전 지역 원하는 장소까지 신속하게 배차해드립니다.",
+    desc: "수도권 전 지역 원하는 장소까지 신속하게 무료 배차해드립니다.",
   },
   {
     icon: CircleCheckBig,
@@ -34,36 +34,45 @@ export default function AccidentProcess() {
   return (
     <section
       id="accident"
-      style={{ minHeight: "1000px", background: "red" }}
-      className="bg-[#111] py-24 scroll-mt-28"
+      className="relative overflow-hidden bg-black py-24 scroll-mt-28"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      {/* 배경 효과 */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#facc1515,transparent_55%)]" />
 
-        <p className="text-center text-yellow-400 tracking-[6px] font-semibold">
-          ACCIDENT RENTAL
+      <div className="relative mx-auto max-w-7xl px-6">
+        <p className="text-center text-sm font-bold tracking-[8px] uppercase text-yellow-400">
+          PREMIUM ACCIDENT SERVICE
         </p>
 
-        <h2 className="mt-4 text-center text-5xl font-black text-white">
-          사고대차 절차
+        <h2 className="mt-5 text-center text-4xl font-black text-white md:text-5xl">
+          사고대차 진행절차
         </h2>
 
-        <p className="mt-5 mb-16 text-center text-gray-300">
-          보험사 확인부터 차량 배차, 수리업체 픽업 & 드랍,
-          수리 완료 후 렌트 반납까지
+        <p className="mx-auto mt-6 mb-16 max-w-3xl text-center leading-8 text-gray-400">
+          사고 접수부터 보험사 확인, 차량 배차,
           <br />
-          한솔네트웍스가 원스톱으로 도와드립니다.
+          수리 완료 후 차량 회수까지
+          <span className="text-yellow-400 font-semibold">
+            {" "}
+            한솔네트웍스 송도지점
+          </span>
+          이 원스톱으로 진행해드립니다.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {steps.map((step, index) => {
             const Icon = step.icon;
 
             return (
               <div
                 key={index}
-                className="rounded-3xl border border-white/10 bg-white/5 p-10 text-center transition-all duration-300 hover:-translate-y-2 hover:border-yellow-400"
+                className="group relative overflow-hidden rounded-3xl border border-yellow-500/20 bg-zinc-900 p-10 shadow-xl transition-all duration-300 hover:-translate-y-3 hover:border-yellow-400 hover:shadow-yellow-500/20"
               >
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-yellow-400">
+                <div className="absolute right-6 top-5 text-6xl font-black text-white/5">
+                  0{index + 1}
+                </div>
+
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-yellow-400 transition duration-300 group-hover:scale-110">
                   <Icon size={36} className="text-black" />
                 </div>
 
@@ -71,14 +80,15 @@ export default function AccidentProcess() {
                   {step.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-gray-300">
+                <p className="mt-5 leading-8 text-gray-400">
                   {step.desc}
                 </p>
+
+                <div className="mt-8 h-1 w-14 rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-24" />
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
