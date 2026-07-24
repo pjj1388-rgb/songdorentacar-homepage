@@ -41,13 +41,6 @@ const cars = [
     stock: "보유 1대",
   },
   {
-    name: "K5",
-    image: "/cars/k5.jpg",
-    desc: "중형 세단 · 합리적인 가격",
-    badge: "SEDAN",
-    stock: "보유 1대",
-  },
-  {
     name: "디 올 뉴 싼타페 MX5",
     image: "/cars/santafe.jpg",
     desc: "6인승 SUV · 풀옵션 차량",

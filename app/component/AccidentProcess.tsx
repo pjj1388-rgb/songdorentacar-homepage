@@ -16,7 +16,7 @@ const steps = [
   {
     icon: ClipboardCheck,
     title: "보험사 확인",
-    desc: "보험사 대차 가능 여부를 확인한 뒤 한솔네트웍스로 연락합니다.",
+    desc: "보험사 대차 가능 여부를 확인하신 후",
   },
   {
     icon: CarFront,
@@ -49,10 +49,10 @@ export default function AccidentProcess() {
         </h2>
 
         <p className="mx-auto mt-6 mb-16 max-w-3xl text-center leading-8 text-gray-400">
-          사고 접수부터 보험사 확인, 차량 배차,
+          현장출동! 사고 접수부터 보험사 확인, 차량 배차,
           <br />
-          수리 완료 후 차량 회수까지
-          <span className="text-yellow-400 font-semibold">
+          수리 완료 후 전문 검수 및 차량 회수까지
+          <span className="font-semibold text-yellow-400">
             {" "}
             한솔네트웍스 송도지점
           </span>
@@ -83,6 +83,24 @@ export default function AccidentProcess() {
                 <p className="mt-5 leading-8 text-gray-400">
                   {step.desc}
                 </p>
+
+                {/* 보험사 확인 카드만 버튼 표시 */}
+                {step.title === "보험사 확인" && (
+                  <>
+                    <a
+                      href="tel:01022213110"
+                      className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-yellow-400 px-5 py-4 text-lg font-black text-black transition hover:scale-105 hover:bg-yellow-300"
+                    >
+                      📞 지금 전화하기
+                    </a>
+
+                    <p className="mt-4 text-center text-sm leading-6 text-gray-400">
+                      전화 한 통이면
+                      <br />
+                      24시간 신속하게 배차해드립니다.
+                    </p>
+                  </>
+                )}
 
                 <div className="mt-8 h-1 w-14 rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-24" />
               </div>

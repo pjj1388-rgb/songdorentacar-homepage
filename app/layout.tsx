@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "한솔네트웍스 송도지점",
     description:
-      "송도단기렌트 · 사고대차 전문업체",
+      "인천단기렌트 · 사고대차 전문업체",
     url: "https://songdorentacar.co.kr",
     siteName: "한솔네트웍스 송도지점",
     locale: "ko_KR",

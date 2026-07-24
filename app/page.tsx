@@ -7,6 +7,7 @@ import AccidentProcess from "./component/AccidentProcess";
 import EmergencySection from "./component/EmergencySection";
 import CTASection from "./component/CTASection";
 import WhyUs from "./component/WhyUs";
+import ReviewSection from "./component/ReviewSection";
 import ContactSection from "./component/ContactSection";
 import Footer from "./component/Footer";
 import MobileBar from "./component/MobileBar";
@@ -17,7 +18,6 @@ export default function Home() {
       <Header />
 
       <main>
-
         <Hero />
 
         <StatisticsSection />
@@ -34,8 +34,9 @@ export default function Home() {
 
         <CTASection />
 
-        <ContactSection />
+        <ReviewSection />
 
+        <ContactSection />
       </main>
 
       <Footer />
